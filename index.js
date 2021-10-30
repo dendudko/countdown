@@ -1,4 +1,5 @@
 let date;
+let timeout;
 
 function out() {
     document.getElementById('timer').innerHTML = date.toLocaleTimeString();
@@ -8,7 +9,7 @@ async function timer(){
         if (date.getSeconds()!=0){
             out();
             date.setSeconds(date.getSeconds()-1);
-            setTimeout(timer, 1000);
+            timeout = setTimeout(timer, 1000);
         }
         else{
             out();
@@ -19,6 +20,7 @@ async function timer(){
 
 function start(){
     date = new Date(0, 0, 0, 0, 0, 10, 0);
+    clearTimeout(timeout);
     out();
     timer();
 }

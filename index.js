@@ -5,17 +5,17 @@ function out() {
     document.getElementById('timer').innerHTML = date.toLocaleTimeString();
 }
 async function timer(){
-    let promise = new Promise((resolve, reject) => {
+    let promise = new Promise((resolve) => {
+        out();
         if (date.getSeconds()!=0){
-            out();
             date.setSeconds(date.getSeconds()-1);
             timeout = setTimeout(timer, 1000);
         }
         else{
-            out();
-            setTimeout(()=> reject(alert("Время вышло!")), 10)
+            resolve("Время вышло!");
         }
     })
+        .then(value => setTimeout(() => alert(value), 0));
 }
 
 function start(){

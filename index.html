@@ -7,8 +7,8 @@
     <link href="favicon-16.png" rel="icon" type="image/x-icon">
 
 </head>
-<body id="body">
-
+<body id="body" onload="document.getElementById('input').focus()">
+<input type="number" placeholder="Введите количество секунд:" class="input" id="input">
 <h1 id="timer">00:00:00</h1>
 <input type="button" class="button" value="START" onclick="start()">
 </body>

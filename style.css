@@ -1,5 +1,22 @@
 body {
     background: black;
+    text-align: center;
+}
+
+.input{
+    border:3px solid #ffcd08;
+    border-radius: 20px;
+    width: 320px;
+    padding: 9px 15px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Yu Gothic UI Semibold";
+    font-size: 20px;
+    margin: 15% 0 0 0;
+}
+
+.input:focus {
+    outline: none;
 }
 
 h1{
@@ -7,21 +24,19 @@ h1{
     color: #ffcd08;
     font-size: 60px;
     font-family: "Yu Gothic UI Semibold";
-    margin-top: 18%;
+    margin: 0;
 }
 
 .button{
     background: white;
     padding: 9px 10px;
+    border-radius: 20px;
     border:3px solid #ffcd08;
     width: 200px;
-    position:absolute;
-    margin: 0 auto;
-    left: 0px;
-    right: 0px;
     font-family: "Yu Gothic UI Semibold";
     font-size: 20px;
     color: #ffcd08;
+    margin: 15px;
 }
 .button:hover{
     background: black;
